@@ -12,8 +12,8 @@ A second goal of this study will be to determine if a binary classification mode
 #### A paragraph description of the data you used, plus your data acquisition, ingestion, and cleaning steps.
 #### A short description of software requirements (e.g., Pandas, Scikit-learn) required by your analysis.
 
-[1]: blahjsdkjnsdkjnsdkj.
+[1]: https://www.cdc.gov/aging/aginginfo/alzheimers.htm#:~:text=Alzheimer%27s%20disease%20is%20the%20most,thought%2C%20memory%2C%20and%20language.
 
-[2]: blahjsdkjnsdkjnsdkj.
+[2]: https://www.nia.nih.gov/health/how-alzheimers-disease-treated#:~:text=Treatment%20for%20mild%20to%20moderate%20Alzheimer's%20disease,-Treating%20the%20symptoms&text=Galantamine%2C%20rivastigmine%2C%20and%20donepezil%20are,some%20cognitive%20and%20behavioral%20symptoms.
 
-[4]: blahjsdkjnsdkjnsdkj.
+[4]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7050025/
