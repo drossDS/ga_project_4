@@ -2,7 +2,7 @@
 ### Peacock Data Science Co.
 ### Jason Lu, Juan Marcucci, Dan Rossetti
 
->Peacock Data Science Co., have been contracted by the Alzheimer's Foundation to create a cutting edge diagnostic tool for the identification of Alzheimer's disease in MRI images.
+>Peacock Data Science Co., have been contracted by the Alzheimer's Foundation to create a cutting edge diagnostic tool for the Severity Classification of Alzheimer's Disease Using MRI Images.
 
 
 ### Table of contents:
@@ -11,7 +11,8 @@
 - [Data Acquisition](#Data-Acquisition)
 - [Software Requirements](#Software-Requirements)
 - [Notebooks](#Notebooks)
-- [Executive Summary](#Executive-Summary)
+- [Summary](#Summary)
+- [Conclusion](#Conclusion)
 - [Sources](#Sources)
 
 ### Problem statement:
@@ -38,7 +39,7 @@ This will greatly reduce the bias and manual labor of having doctors individuall
 Can we build a neural network that can correctly classify Alzheimer's severity in MRI images of brains? Furthermore, when examining for the earliest signs of the disease is it better to train the model on all levels of severity or just cases of very mild dementia and no dementia?
 
 ### Data Acquisition:
-Seeing as how this is a proof-of-concept model and for demonstration purposes only we used publicly available brain MRI images from this Kaggle dataset: https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images. Origin of the data posted to Kaggle is unknown as no source information is provided and no patient information is included.
+Seeing as how this is a proof-of-concept model and for demonstration purposes only we used publicly available brain MRI images from this Kaggle dataset: https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images. Origin of the data posted to Kaggle is unknown as no source information is provided and no patient information is included. No data cleaning was necessary as all the pictures were the same pixel size and pre-organized by condition.
 In lieu of a data dictionary, a breakdown of how many images are provided by Kaggle for each class of dementia severity is proved here for both the training and testing datasets:
 
 |                    | Training Counts | Training Percentages | Testing Counts | Testing Percentages |
@@ -48,6 +49,7 @@ In lieu of a data dictionary, a breakdown of how many images are provided by Kag
 | Mild Dementia      |             717 |                  14% |            179 |                 14% |
 | Moderate Dementia  |              52 |                   1% |             12 |                  1% |
 
+![Images of brains for each class](images/Brain_images_for_each_class.png)
 
 ### Software Requirements:
 - Pandas
@@ -61,18 +63,22 @@ In lieu of a data dictionary, a breakdown of how many images are provided by Kag
 - (We recommend running notebooks on Google colab as software is pre-installed, GPUs are free to use, and the code can run unaltered).
 
 ### Notebooks
-1. 1_EDA.ipynb
-2. 2_manually_built_models.ipynb
-3. 3_pretrained_models
-4. 4_binary_models.ipynb
+1. **1_EDA.ipynb** - This notebook examines the brain MRI images by displaying one image from each class for both the training and testing datasets. Additionally, the images sizes for all images in both datasets are compared along with basic statistics for each class. A more in-depth analysis is then performed to understand trends between the different classes to create additional comparisons.  
+2. **2_manually_built_models.ipynb** - This notebook contains a series of Convolutional Neural Network (CNN) models which have been employed to perform multi-class image classification. A variety ot tehcniques are employed to improve model performance.
+3. **3_pretrained_models** - This notebook seeks to determine if pre-trained models can produce better results when attempting to classify the different classes of brain scans.
+4. **4_binary_models.ipynb** - This notebook seeks to understand if creating binary classifcaiton versions of some of the models in Notebooks 2 and 3 on only the No Dementia and Very Mild Dementia classes will have a positive impact on the models' ability to predict those two classes.
 5. 
 
-### Executive Summary
-Here is the Executive Summary
+### Summary
+- We imported the data, checked to make sure all images were of brains and all the same size. Performed EDA to see what our data looked like and similarities within classes.
+- Created a simple neural network model and continually improved it by adding hidden layers and nodes in the layers.
+- Created a new set of models, this time starting with pre-trained models and using transfer learning.
+- Followed the same workflow, but this time for the binary model only trained with two of the classes. Created a simple convolutional neural netword, continuosly improved it, the created more models based off of pre-trained models. 
 
+### Conclusion
 
 ### Sources
-1:https://www.cdc.gov/aging/aginginfo/alzheimers.htm#:~:text=Alzheimer%27s%20disease%20is%20the%20most,thought%2C%20memory%2C%20and%20language.
+1: https://www.cdc.gov/aging/aginginfo/alzheimers.htm#:~:text=Alzheimer%27s%20disease%20is%20the%20most,thought%2C%20memory%2C%20and%20language.
 
 2: https://www.nia.nih.gov/health/how-alzheimers-disease-treated#:~:text=Treatment%20for%20mild%20to%20moderate%20Alzheimer's%20disease,-Treating%20the%20symptoms&text=Galantamine%2C%20rivastigmine%2C%20and%20donepezil%20are,some%20cognitive%20and%20behavioral%20symptoms.
 
