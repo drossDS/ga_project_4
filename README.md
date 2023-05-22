@@ -86,7 +86,7 @@ The binary classification models are simply a subset of the models used for mult
 - MRI brain scan images were imported from Kaggle and contained training and test datasets with images of brains with no dementia, very mild dementia, mild dementia and moderate dementia
 - These images were used to train a variety of manually built and pre-trained models
 - After these models were used to perform multi-class image classification, they were adapted to become binary classification models to classify images in only the no dementia and very mild dementia classes
-- Model performances ranged between the low 50% to low ____% range for the multi-class models and low 50% to low 80% for the binary classification models
+- Model performances ranged between the low 50% to low 70% range for the multi-class models and low 50% to low 80% for the binary classification models
 - The best multi-class model achieved and accuracy of around 71% and the best binary classification model achieved an accuracy of approximately 81%
 
 
